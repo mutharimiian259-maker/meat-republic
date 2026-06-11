@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Meat Republic Meru | Best Nyama Choma in Meru Kenya</title>
+  <meta name="description" content="Meat Republic Meru – Premium fire-grilled Goat Choma, Beef Choma, Pork Choma, Chicken & Fish. Opposite Meru National Polytechnic. Catering for weddings, events & corporate." />
+  <meta name="keywords" content="Meat Republic Meru, Best Nyama Choma Meru, Goat Choma Meru, Pork Choma Meru, Beef Choma Meru, Restaurant Meru Kenya, Catering Meru" />
+  <meta name="author" content="Meat Republic Meru" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="KE-26" />
+  <meta name="geo.placename" content="Meru" />
+  <link rel="canonical" href="https://meatrepublicmeru.co.ke/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meat Republic Meru | Premium Nyama Choma" />
+  <meta property="og:description" content="Fire-grilled Goat, Beef, Pork, Chicken & Fish. Opposite Meru National Polytechnic." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://meatrepublicmeru.co.ke/" />
+  <meta property="og:image" content="assets/images/og/og-image.webp" />
+  <meta property="og:image:alt" content="Meat Republic Meru - Premium Nyama Choma" />
+  <meta property="og:locale" content="en_KE" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meat Republic Meru | Premium Nyama Choma" />
+  <meta name="twitter:description" content="Authentic fire-grilled nyama choma in Meru. Opposite Meru National Polytechnic." />
+  <meta name="twitter:image" content="assets/images/og/twitter-card.webp" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/branding/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/images/branding/logo-dark.webp" />
+  
+  <!-- Fonts: COMPLETE OVERHAUL - Bebas Neue, Righteous, Nunito (replaces Playfair/Inter/Oswald) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <!-- Inline critical CSS overrides: Hero + typography + theme colours (exactly as requested) -->
+  <style>
+    /* ===== TYPOGRAPHY OVERHAUL & THEME VARIABLES ===== */
+    :root {
+      /* NEW THEME COLOURS - Flame Orange, Maize Gold, Ember Accents */
+      --primary: #CC3700;       /* flame orange-red (was #8B4513) */
+      --primary-dark: #992600;
+      --secondary: #F4A636;      /* maize gold (was #D4A373) */
+      --accent: #FF4500;         /* true ember (was #B22222) */
+      --gold: #E8B84B;           /* brighter gold (was #C9A84C) */
+      --gold-glow: rgba(232,184,75,0.35);
+      
+      /* Background & neutral updates to match fire-pit vibe */
+      --bg-dark: #0f0500;
+      --bg-card: rgba(20,8,0,0.9);
+      --text-light: #FFF4E6;
+      --text-muted-light: #E0C8A8;
+    }
+    
+    /* Dark theme support */
+    [data-theme="dark"] {
+      --bg: #0a0300;
+      --bg-card: rgba(20,8,0,0.85);
+      --text: #FFF4E6;
+      --text-muted: #E0C8A8;
+      --border: rgba(244,166,54,0.2);
+    }
+    
+    /* Global font application */
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #FAF7F2;
+      color: #1F1F1F;
+    }
+    
+    [data-theme="dark"] body {
+      background: #0a0300;
+      color: #FFF4E6;
+    }
+    
+    h1, h2, h3, .hero-headline, .hero-badge, .menu-hero-title, .section-title, .nav-logo-text span:first-child {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.02em;
+    }
+    
+    .hero-badge, .hero-stat strong, .res-step-num, .btn-primary, .btn-whatsapp, .btn-outline, .btn-white, .btn-ghost, 
+    .menu-cat-btn, .price-tag, .hero-tag, .section-eyebrow {
+      font-family: 'Righteous', cursive;
+      letter-spacing: 0.01em;
+    }
+    
+    p, .hero-sub, .hero-stat span, .footer-brand-desc, .about-text-block p, .contact-row-text, .hours-table, 
+    .form-group label, .testimonial-text, .why-card p {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    
+    /* Hero section specific overrides — exactly as requested */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #1C0A00 0%, #3D1200 50%, #8B2500 100%);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    
+    /* DIAGONAL STRIPE TEXTURE: corrugated / jua kali feel */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0,0,0,0.12) 0px,
+        rgba(0,0,0,0.12) 2px,
+        transparent 2px,
+        transparent 12px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* second rough texture layer for iron sheet effect */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -30deg,
+        rgba(255,100,20,0.03) 0px,
+        rgba(255,100,20,0.03) 1px,
+        transparent 1px,
+        transparent 8px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+    }
+    
+    /* Hero badge: uppercase Bebas, wide letter-spacing, bright orange pill */
+    .hero-badge {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 3px;
+      background: #CC3700;
+      color: white;
+      display: inline-block;
+      padding: 0.6rem 1.6rem;
+      border-radius: 60px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: none;
+      font-weight: normal;
+    }
+    
+    /* Hero headline: clamp + text-shadow orange glow + em italic+skew */
+    .hero-headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      text-shadow: 0 2px 12px rgba(204,55,0,0.6), 0 0 8px rgba(244,166,54,0.4);
+      letter-spacing: 0.02em;
+    }
+    
+    .hero-headline em {
+      font-style: italic;
+      transform: skew(-3deg);
+      display: inline-block;
+      position: relative;
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: inherit;
+    }
+    
+    /* Rough underline with opacity variation */
+    .hero-headline em::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #CC3700, #F4A636, #CC3700);
+      border-radius: 4px;
+      opacity: 0.85;
+      filter: blur(0.6px);
+      mix-blend-mode: overlay;
+    }
+    
+    .hero-sub {
+      font-size: 1.2rem;
+      max-width: 550px;
+      margin-bottom: 1.8rem;
+      color: #FFE6CC;
+    }
+    
+    /* Hero buttons: solid flame-orange primary, no gradient softness */
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.8rem 0 1rem;
+    }
+    
+    .btn-primary {
+      background: #CC3700;
+      border: none;
+      padding: 0.9rem 2rem;
+      font-family: 'Righteous', cursive;
+      font-size: 1rem;
+      border-radius: 60px;
+      color: white;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 0 #731f00;
+      cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+      background: #E64400;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0 #731f00;
+    }
+    
+    .btn-whatsapp {
+      background: #25D366;
+      padding: 0.9rem 2rem;
+      font-family: 'Righteous', cursive;
+      border-radius: 60px;
+      text-decoration: none;
+      color: #1e1e1e;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+      box-shadow: 0 6px 0 #128C7E;
+    }
+    
+    /* Hero stat cards: charred wood background, orange left-border accent */
+    .hero-stat-cards {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    
+    .hero-stat {
+      background: rgba(20,8,0,0.85);
+      backdrop-filter: blur(4px);
+      padding: 0.8rem 1.3rem;
+      border-radius: 24px;
+      border-left: 4px solid #FF4500;
+      text-align: center;
+      min-width: 90px;
+      transition: transform 0.2s;
+    }
+    
+    .hero-stat strong {
+      font-family: 'Righteous', cursive;
+      font-size: 1.5rem;
+      color: #F4A636;
+      display: block;
+    }
+    
+    .hero-stat span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    
+    .hero-tag {
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(5px);
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-family: 'Righteous', cursive;
+      font-size: 0.8rem;
+      color: #FFD9A5;
+      border: 1px solid rgba(244,166,54,0.4);
+    }
+    
+    /* mobile responsive fixes */
+    @media (max-width: 768px) {
+      .hero-stat-cards {
+        gap: 0.6rem;
+      }
+      .hero-stat {
+        padding: 0.5rem 0.8rem;
+        min-width: 70px;
+      }
+      .hero-headline {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+    }
+    
+    .hero-glow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 50%, rgba(255,69,0,0.12), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .hero-embers {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" tabindex="0" role="button" aria-label="Meat Republic Meru - Go to home">
+      <div class="nav-logo-icon" aria-hidden="true">🔥</div>
+      <div class="nav-logo-text">
+        <span>Meat Republic</span>
+        <span>Meru, Kenya</span>
+      </div>
+    </div>
+    <div class="nav-links" role="list">
+      <a href="#" data-page="home" class="active" aria-current="page" role="listitem">Home</a>
+      <a href="#" data-page="menu" role="listitem">Menu</a>
+      <a href="#" data-page="gallery" role="listitem">Gallery</a>
+      <a href="#" data-page="catering" role="listitem">Catering</a>
+      <a href="#" data-page="about" role="listitem">About</a>
+      <a href="#" data-page="contact" role="listitem">Contact</a>
+      <a href="#" data-page="reservations" class="nav-cta" role="listitem">Reserve a Table</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" role="menu" aria-label="Mobile navigation">
+    <a href="#" data-page="home" role="menuitem">🏠 Home</a>
+    <a href="#" data-page="menu" role="menuitem">📋 Our Menu</a>
+    <a href="#" data-page="gallery" role="menuitem">📸 Gallery</a>
+    <a href="#" data-page="catering" role="menuitem">🍖 Catering</a>
+    <a href="#" data-page="about" role="menuitem">ℹ️ About Us</a>
+    <a href="#" data-page="contact" role="menuitem">📞 Contact</a>
+    <a href="#" data-page="reservations" role="menuitem" style="color: var(--secondary); font-weight: 700;">🍽️ Reserve a Table</a>
+  </div>
+</nav>
+
+<!-- ==================== HOME PAGE ==================== -->
+<main class="page active" id="page-home">
+  <!-- Hero Section with upgraded CSS -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-embers" id="embers" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content container">
+      <div class="hero-text">
+        <div class="hero-badge">Meru's #1 Nyama Choma Spot</div>
+        <!-- Premium Roasted Meat Experience with italic+skew on "Roasted Meat" + rough underline -->
+        <h1 class="hero-headline">Premium <em>Roasted Meat</em><br>Experience in Meru</h1>
+        <p class="hero-sub">Fresh Goat Choma, Beef Choma, Pork Choma, Chicken &amp; Fish — prepared over authentic charcoal fire. Opposite Meru National Polytechnic.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">🐐 Goat Choma</span>
+          <span class="hero-tag">🥩 Beef Choma</span>
+          <span class="hero-tag">🐷 Pork Choma</span>
+          <span class="hero-tag">🍗 Chicken</span>
+          <span class="hero-tag">🐟 Fish</span>
+        </div>
+        <div class="hero-btns">
+          <button class="btn-primary" data-page="menu">🍽️ View Full Menu</button>
+          <a href="https://wa.me/254107506429?text=Hello%20Meat%20Republic%20Meru!%20I'd%20like%20to%20place%20an%20order." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">📲 Order via WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-plate">
+          🔥
+          <div class="hero-plate-ring"></div>
+        </div>
+        <div class="hero-stat-cards">
+          <div class="hero-stat"><strong>5★</strong><span>Rated</span></div>
+          <div class="hero-stat"><strong>8+</strong><span>Yrs Open</span></div>
+          <div class="hero-stat"><strong>500+</strong><span>Daily</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Meats -->
+  <section id="meats-section" aria-labelledby="meats-title">
+    <div class="container">
+      <div class="section-eyebrow">Our Specialties</div>
+      <h2 id="meats-title" class="section-title">Fire-Grilled to Perfection</h2>
+      <p class="section-desc">Every cut sourced fresh daily from local Meru farms. Slow-roasted over hot charcoal for that deep smoky flavour Meru is known for.</p>
+      <div class="meats-grid" id="meatsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="why-section" aria-labelledby="why-title">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:48px;">
+        <div class="section-eyebrow">Why Choose Us</div>
+        <h2 id="why-title" class="section-title light">Meru's Most Loved<br>Choma Destination</h2>
+        <p class="section-desc light">Locals and visitors agree — nobody does nyama choma like Meat Republic Meru.</p>
+      </div>
+      <div class="why-grid" id="whyGrid"></div>
+    </div>
+  </section>
+
+  <!-- Catering Preview -->
+  <section aria-labelledby="catering-preview-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+        <div>
+          <div class="section-eyebrow">Catering Services</div>
+          <h2 id="catering-preview-title" class="section-title">We Come to Your Event — Anywhere in Meru</h2>
+          <p class="section-desc" style="margin-bottom:24px;">From intimate family gatherings of 20 people to massive county-wide weddings of 1,000+. Our catering team handles the fire, you enjoy the celebration.</p>
+          <ul style="margin-bottom:28px;">
+            <li><span style="color:var(--primary);font-weight:700;">✓</span> Weddings & Traditional Ceremonies</li>
+            <li><span style="color:var(--primary);font-weight:700;">✓</span> Corporate Events & Team Building</li>
+            <li><span style="color:var(--primary);font-weight:700;">✓</span> Graduations & Birthday Parties</li>
+            <li><span style="color:var(--primary);font-weight:700;">✓</span> Burial & Fundraising Events</li>
+            <li><span style="color:var(--primary);font-weight:700;">✓</span> School Events & Prize Giving Days</li>
+          </ul>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button class="btn-primary" data-page="catering">View Packages</button>
+            <a href="https://wa.me/254107506429?text=Hello!%20I%20need%20catering%20services%20from%20Meat%20Republic%20Meru." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="catering-preview-image" aria-hidden="true">🎪</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section style="background: var(--bg-dark);" aria-labelledby="gallery-preview-title">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:40px;">
+        <div class="section-eyebrow">Our Gallery</div>
+        <h2 id="gallery-preview-title" class="section-title light">See the Sizzle</h2>
+        <p class="section-desc light">A picture is worth a thousand bites. Here's a peek at what comes off our grill every day.</p>
+      </div>
+      <div class="gallery-preview-grid" id="galleryPreview"></div>
+      <div style="text-align:center;">
+        <button class="btn-outline" data-page="gallery">View Full Gallery →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:48px;">
+        <div class="section-eyebrow">Customer Reviews</div>
+        <h2 id="testimonials-title" class="section-title light">What Meru is Saying</h2>
+      </div>
+      <div class="testimonials-slider" id="testimonialsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Ready for the Best Choma in Meru?</h2>
+      <p>Walk in any day, reserve a table, or order via WhatsApp. We're opposite Meru National Polytechnic — just follow the smoke! 🔥</p>
+      <div class="cta-btns">
+        <button class="btn-white" data-page="reservations">🍽️ Reserve a Table</button>
+        <a href="https://wa.me/254107506429?text=Hello%20Meat%20Republic%20Meru!%20I%20want%20to%20order." class="btn-ghost" target="_blank" rel="noopener noreferrer">📲 WhatsApp Order</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== MENU PAGE ==================== -->
+<div class="page" id="page-menu" role="main" aria-label="Menu page">
+  <div class="menu-hero">
+    <div class="container">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--secondary);">Full Menu</div>
+      <h1 class="menu-hero-title">Our Menu</h1>
+      <p class="menu-hero-sub">Fresh daily. Fire-grilled. Authentically Kenyan. Prices are per kilogram unless stated.</p>
+    </div>
+  </div>
+  <div class="menu-cats" id="menuCats" role="tablist" aria-label="Menu categories"></div>
+  <div id="menu-grid" role="region" aria-live="polite"></div>
+</div>
+
+<!-- ==================== GALLERY PAGE ==================== -->
+<div class="page" id="page-gallery" role="main" aria-label="Gallery page">
+  <div class="gallery-hero">
+    <div class="container">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--secondary);">Visual Journey</div>
+      <h1 class="menu-hero-title">Our Gallery</h1>
+      <p class="menu-hero-sub">From the grill to the table — every image tells a flavour story.</p>
+    </div>
+  </div>
+  <div class="gallery-filters" id="galleryFilters" role="tablist" aria-label="Gallery categories"></div>
+  <div id="gallery-grid" role="region" aria-live="polite"></div>
+</div>
+
+<!-- ==================== CATERING PAGE ==================== -->
+<div class="page" id="page-catering" role="main" aria-label="Catering page">
+  <div class="catering-hero">
+    <div class="container">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--secondary);">Catering Services</div>
+      <h1 class="menu-hero-title">We Bring the Choma to You</h1>
+      <p class="menu-hero-sub">Professional event catering across Meru County. Any size, any occasion — we handle the fire.</p>
+    </div>
+  </div>
+  <div class="packages-grid" id="packagesGrid"></div>
+
+  <!-- Inquiry Form -->
+  <section class="inquiry-section" id="inquiryForm">
+    <div class="inquiry-wrapper">
+      <h3>Request a Catering Quote</h3>
+      <p>Fill in the form below and we'll get back to you within 2 hours during business hours.</p>
+      <div class="form-grid" id="cateringFormFields">
+        <div class="form-group"><label for="c_name">Full Name *</label><input type="text" id="c_name" placeholder="e.g. John Mutuma" aria-required="true" /></div>
+        <div class="form-group"><label for="c_phone">Phone Number *</label><input type="tel" id="c_phone" placeholder="0712 345 678" aria-required="true" /></div>
+        <div class="form-group"><label for="c_email">Email Address</label><input type="email" id="c_email" placeholder="your@email.com" /></div>
+        <div class="form-group"><label for="c_event">Event Type *</label><select id="c_event" aria-required="true"><option value="">Select Event Type</option><option>Wedding / Ruracio</option><option>Corporate Event</option><option>Graduation Party</option><option>Birthday Party</option><option>Funeral / Harambee</option><option>School / College Event</option><option>Private Party</option><option>Other</option></select></div>
+        <div class="form-group"><label for="c_guests">Number of Guests *</label><input type="number" id="c_guests" placeholder="e.g. 150" aria-required="true" /></div>
+        <div class="form-group"><label for="c_date">Event Date *</label><input type="date" id="c_date" aria-required="true" /></div>
+        <div class="form-group form-full"><label for="c_msg">Additional Message</label><textarea id="c_msg" placeholder="Tell us more — venue location, preferred meats, special requirements..."></textarea></div>
+      </div>
+      <button class="form-submit" id="submitCatering">🔥 Send Catering Inquiry</button>
+      <div class="form-success" id="cateringSuccess"><p style="font-size:1.5rem;margin-bottom:8px;">🎉</p><strong>Inquiry Received!</strong><p style="margin-top:6px;">Our catering team will contact you within 2 hours.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== ABOUT PAGE ==================== -->
+<div class="page" id="page-about" role="main" aria-label="About page">
+  <div class="about-hero">
+    <div class="container">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--secondary);">Our Story</div>
+      <h1 class="menu-hero-title">About Meat Republic Meru</h1>
+      <p class="menu-hero-sub">A Meru institution built on fire, flavour, and family.</p>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="about-visual" aria-hidden="true">🔥</div>
+    <div class="about-text-block">
+      <h2>Born in Meru, Rooted in Tradition</h2>
+      <p>Meat Republic Meru started with a simple idea: serve the freshest, most flavourful nyama choma in Meru Town. Located opposite Meru National Polytechnic, we have been fire-grilling premium goat, beef, pork, chicken and fish for the Meru community since we opened our doors.</p>
+      <p>Our charcoal pits never sleep. Every morning, fresh meat is sourced directly from trusted local farmers and butcheries in the Mount Kenya region. By midday, the aroma of sizzling choma fills the street — and by evening, our tables are full of families, friends, students and workers who know exactly where to find the real thing.</p>
+      <div class="about-stats">
+        <div class="about-stat-box"><strong>8+</strong><span>Years Open</span></div>
+        <div class="about-stat-box"><strong>500+</strong><span>Daily Customers</span></div>
+        <div class="about-stat-box"><strong>200+</strong><span>Events Catered</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTACT PAGE ==================== -->
+<div class="page" id="page-contact" role="main" aria-label="Contact page">
+  <div class="contact-hero">
+    <div class="container">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--secondary);">Find Us</div>
+      <h1 class="menu-hero-title">Contact & Location</h1>
+      <p class="menu-hero-sub">We're easy to find — opposite Meru National Polytechnic. Come in or reach out below.</p>
+    </div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info-card">
+      <h3>Business Information</h3>
+      <div class="contact-row"><div class="contact-row-icon">📍</div><div class="contact-row-text"><strong>Location</strong><span>Opposite Meru National Polytechnic,<br>Meru Town, Meru County, Kenya</span></div></div>
+      <div class="contact-row"><div class="contact-row-icon">📞</div><div class="contact-row-text"><strong>Phone</strong><a href="tel:+254107506429">+254 700 000 000</a></div></div>
+      <div class="contact-row"><div class="contact-row-icon">💬</div><div class="contact-row-text"><strong>WhatsApp</strong><a href="https://wa.me/254107506429" target="_blank" rel="noopener noreferrer">+254 700 000 000 (Chat)</a></div></div>
+      <div class="contact-row"><div class="contact-row-icon">✉️</div><div class="contact-row-text"><strong>Email</strong><a href="mailto:info@meatrepublicmeru.co.ke">info@meatrepublicmeru.co.ke</a></div></div>
+      <div class="contact-row"><div class="contact-row-icon">🕐</div><div class="contact-row-text"><strong>Opening Hours <span class="open-badge">Open Now</span></strong><table class="hours-table"><tr><td>Mon – Thu</td><td>10:00 AM – 10:00 PM</td></tr><tr><td>Fri – Sat</td><td>9:00 AM – 11:00 PM</td></tr><tr><td>Sunday</td><td>10:00 AM – 10:00 PM</td></tr></table></div></div>
+    </div>
+    <div class="contact-form-card">
+      <h3>Send Us a Message</h3>
+      <p>Have a question? We'll reply within 1 hour during business hours.</p>
+      <div class="form-grid">
+        <div class="form-group"><label for="ct_name">Your Name *</label><input type="text" id="ct_name" /></div>
+        <div class="form-group"><label for="ct_phone">Phone *</label><input type="tel" id="ct_phone" /></div>
+        <div class="form-group form-full"><label for="ct_email">Email</label><input type="email" id="ct_email" /></div>
+        <div class="form-group form-full"><label for="ct_subject">Subject</label><select id="ct_subject"><option>Table Reservation</option><option>Catering Inquiry</option><option>Menu Question</option><option>Complaint / Feedback</option><option>Partnership</option><option>Other</option></select></div>
+        <div class="form-group form-full"><label for="ct_msg">Message *</label><textarea id="ct_msg" rows="4"></textarea></div>
+      </div>
+      <button class="form-submit" id="submitContact">Send Message</button>
+      <div class="form-success" id="contactSuccess"><p style="font-size:1.5rem;margin-bottom:8px;">✅</p><strong>Message Sent!</strong><p style="margin-top:6px;">We'll get back to you shortly.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== RESERVATIONS PAGE ==================== -->
+<div class="page" id="page-reservations" role="main" aria-label="Reservations page">
+  <div class="res-hero">
+    <div class="container">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--secondary);">Table Booking</div>
+      <h1 class="menu-hero-title">Reserve Your Table</h1>
+      <p class="menu-hero-sub">Book ahead and we'll have your table ready. Walk-ins always welcome too!</p>
+    </div>
+  </div>
+  <div class="res-wrapper">
+    <div class="res-steps">
+      <div class="res-step active"><div class="res-step-num">1</div><div class="res-step-label">Details</div></div>
+      <div class="res-step" id="step2"><div class="res-step-num">2</div><div class="res-step-label">Table</div></div>
+      <div class="res-step" id="step3"><div class="res-step-num">3</div><div class="res-step-label">Confirm</div></div>
+    </div>
+    <div class="form-grid">
+      <div class="form-group"><label for="r_name">Full Name *</label><input type="text" id="r_name" /></div>
+      <div class="form-group"><label for="r_phone">Phone *</label><input type="tel" id="r_phone" /></div>
+      <div class="form-group"><label for="r_date">Date *</label><input type="date" id="r_date" /></div>
+      <div class="form-group"><label for="r_time">Time *</label><select id="r_time"><option value="">Select Time</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></div>
+      <div class="form-group"><label for="r_guests">Number of Guests *</label><select id="r_guests"><option>1 – 2 guests</option><option>3 – 4 guests</option><option>5 – 8 guests</option><option>9 – 15 guests</option><option>16 – 30 guests</option><option>30+ guests (Group booking)</option></select></div>
+      <div class="form-group"><label for="r_seat">Seating Preference</label><select id="r_seat"><option>Indoor (A/C Dining)</option><option>Outdoor (Garden)</option><option>Private Room</option><option>No Preference</option></select></div>
+      <div class="form-group form-full"><label for="r_msg">Special Requests</label><textarea id="r_msg" placeholder="Birthday surprise, dietary requirements..."></textarea></div>
+    </div>
+    <button class="form-submit" id="submitReservation">🍽️ Confirm Reservation</button>
+    <div class="form-success" id="resSuccess"><p style="font-size:1.8rem;margin-bottom:8px;">🎉</p><strong>Table Reserved!</strong><p style="margin-top:8px;">We've received your booking. Expect a confirmation call within 30 minutes.</p></div>
+  </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Meat Republic Meru</div>
+      <p class="footer-brand-desc">Meru's premium nyama choma restaurant. Fresh goat, beef, pork, chicken and fish — fire-grilled daily. Opposite Meru National Polytechnic.</p>
+      <div class="footer-social"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a><a href="https://wa.me/254107506429" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">wa</a></div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="menu">Our Menu</a></li><li><a href="#" data-page="gallery">Gallery</a></li><li><a href="#" data-page="catering">Catering</a></li><li><a href="#" data-page="about">About Us</a></li><li><a href="#" data-page="reservations">Reserve a Table</a></li></ul></div>
+    <div class="footer-col"><h4>Our Menu</h4><ul><li><a href="#" data-page="menu">🐐 Goat Choma</a></li><li><a href="#" data-page="menu">🥩 Beef Choma</a></li><li><a href="#" data-page="menu">🐷 Pork Choma</a></li><li><a href="#" data-page="menu">🍗 Kuku Choma</a></li><li><a href="#" data-page="menu">🐟 Samaki Choma</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span>📍</span><span>Opp. Meru National Polytechnic</span></div><div class="footer-contact-item"><span>📞</span><span>+254107506429</span></div><div class="footer-contact-item"><span>✉️</span><span>info@meatrepublicmeru.co.ke</span></div></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2025 Meat Republic Meru. All rights reserved.</div><div class="footer-bottom-links"><a href="#" aria-label="Privacy Policy">Privacy Policy</a><a href="#" aria-label="Terms of Service">Terms of Service</a></div></div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/254107506439?text=Hello%20Meat%20Republic%20Meru!%20I%20want%20to%20order." class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Scripts -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
